@@ -9,10 +9,13 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 import { register  } from "./controller/auth";
-import authRoutes from "./routes/auth.js"
+import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/users.js";
-import postRoutes from "./routes/posts.js"
-import {createPost} from "./controller/posts.js"
+import postRoutes from "./routes/posts.js";
+import {createPost} from "./controller/posts.js";
+import Post from "./models/Post.js";
+import User from "./models/User.js";
+import { users, posts } from "./data/index.js";
 
 /* CONFIGURATION */
 const __filename = fileURLToPath(import.meta.url);
