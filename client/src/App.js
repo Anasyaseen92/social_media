@@ -10,7 +10,8 @@ import { themeSettings } from "./theme.js";
 
 function App() {
   const mode = useSelector((state)=> state.mode);
-  const theme = useMemo = useMemo(()=> createTheme(themeSettings(mode)),[mode]);
+ const theme = useMemo(() => createTheme(themeSettings(mode.trim())), [mode]);
+
 
   return (
     <div className="app">
